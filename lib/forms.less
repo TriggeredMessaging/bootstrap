@@ -52,7 +52,7 @@ input,
 textarea,
 select,
 .uneditable-input {
-  display: block;
+  display: inline-block;
   width: 210px;
   height: @baseLineHeight;
   padding: 4px;
@@ -63,6 +63,17 @@ select,
   border: 1px solid #ccc;
   .border-radius(3px);
 }
+.uneditable-textarea {
+  width: auto;
+  height: auto;
+}
+
+// Inputs within a label
+label input,
+label textarea,
+label select {
+  display: block;
+}
 
 // Mini reset for unique input types
 input[type=image],
@@ -72,7 +83,7 @@ input[type=radio] {
   height: auto;
   padding: 0;
   margin: 3px 0;
-  *margin-top: 0; /* IE6-7 */
+  *margin-top: 0; /* IE7 */
   line-height: normal;
   border: none;
   cursor: pointer;
@@ -99,22 +110,22 @@ input[type=submit] {
 // Set the height of select and file controls to match text inputs
 select,
 input[type=file] {
-  height: @baseLineHeight * 1.5; // In IE7, the height of the select element cannot be changed by height, only font-size
+  height: 28px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
   *margin-top: 4px; /* For IE7, add top margin to align select with labels */
-  line-height: @baseLineHeight * 1.5;
+  line-height: 28px;
 }
 
 // Chrome on Linux and Mobile Safari need background-color
 select {
   width: 220px; // default input width + 10px of padding that doesn't get applied
-  vertical-align: middle;
+  vertical-align: baseline;
   background-color: @white;
 }
 
 // Make multiple select elements height not fixed
 select[multiple],
 select[size] {
-  height: inherit;
+  height: auto;
 }
 
 // Remove shadow from image inputs
@@ -122,8 +133,14 @@ input[type=image] {
   .box-shadow(none);
 }
 
+// Make textarea height behave
 textarea {
   height: auto;
+}
+
+// Hidden inputs
+input[type=hidden] {
+  display: none;
 }
 
 
@@ -279,6 +296,7 @@ textarea[readonly] {
   }
   // Style inputs accordingly
   input,
+  select,
   textarea {
     color: @textColor;
     border-color: @borderColor;
@@ -469,6 +487,10 @@ select:focus:required:invalid {
 // --------------------------
 
 .form-horizontal {
+  // Legend collapses margin, so we're relegated to padding
+  legend + .control-group {
+    padding-top: @baseLineHeight * 1.5;
+  }
   // Increase spacing between groups
   .control-group {
     margin-bottom: @baseLineHeight;

@@ -14,17 +14,19 @@
 
     <!-- Le styles -->
     <link href="../bootstrap.css" rel="stylesheet">
+    <link href="../bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/docs.css" rel="stylesheet">
     <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target=".subnav" data-offset="50">
+  
   
   <!-- Navbar
     ================================================== -->
@@ -211,7 +213,7 @@
       <tr>
         <td><code>@siteWidth</code></td>
         <td><em>Computed sum of all columns and gutters</em></td>
-        <td>Counts number of columns and gutters to set width of the <code>.fixed-container()</code> mixin</td>
+        <td>Counts number of columns and gutters to set width of the <code>.container-fixed()</code> mixin</td>
       </tr>
     </tbody>
   </table>
@@ -355,9 +357,9 @@
     <div class="span5">
       <p>Bootstrap doesn't automatically include these media queries, but understanding and adding them is very easy and requires minimal setup. You have a few options for including the responsive features of Bootstrap:</p>
       <ol>
-        <li>Use the compiled responsive version, bootstrap.reponsive.css</li>
+        <li>Use the compiled responsive version, bootstrap-reponsive.css</li>
         <li>Add @import "responsive.less" and recompile Bootstrap</li>
-        <li>Compile responsive.less as a separate file and include that</li>
+        <li>Modify and recompile responsive.less as a separate</li>
       </ol>
       <p><strong>Why not just include it?</strong> Truth be told, not everything needs to be responsive. Instead of encouraging developers to remove this feature, we figure it best to enable it.</p>
     </div>
@@ -367,7 +369,7 @@
   @media (max-width: 480px) { ... }
 
   // Landscape phone to portrait tablet
-  @media (min-width: 480px) and (max-width: 768px) { ... }
+  @media (max-width: 768px) { ... }
 
   // Portrait tablet to landscape and desktop
   @media (min-width: 768px) and (max-width: 940px) { ... }
@@ -378,6 +380,7 @@
     </div>
   </div>
 </section>
+
      <!-- Footer
       ================================================== -->
       <footer class="footer">
@@ -390,9 +393,11 @@
     </div><!-- /container -->
 
 
-    <!-- Le javascript -->
+
+    <!-- Le javascript
+    ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <!-- <script src="http://code.jquery.com/jquery-1.7.min.js"></script> -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <script src="../js/tests/vendor/jquery.js"></script>
     <script src="assets/js/google-code-prettify/prettify.js"></script>
     <script src="../js/bootstrap-transition.js"></script>

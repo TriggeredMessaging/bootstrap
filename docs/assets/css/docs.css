@@ -30,7 +30,6 @@ body {
   -webkit-transition: all .2s linear;
      -moz-transition: all .2s linear;
           transition: all .2s linear;
-      
 }
 .navbar-fixed .brand:hover {
   text-decoration: none;
@@ -51,31 +50,41 @@ section {
   line-height: 1;
 }
 
+/* Faded out hr */
+hr.soften {
+  height: 1px;
+  margin: 54px 0;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0)); 
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0)); 
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0)); 
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0)); 
+  border: 0;
+}
+
 
 /* Jumbotrons
 -------------------------------------------------- */
 .jumbotron {
   position: relative;
-  text-shadow: 0 1px 0 #fff;
 }
 .jumbotron h1 {
-  margin-right: 40%;
   margin-bottom: 9px;
-  font-size: 90px;
+  font-size: 108px;
   letter-spacing: -1px;
   line-height: 1;
 }
 .jumbotron p {
-  margin-right: 32%;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   font-size: 25px;
   font-weight: 300;
   line-height: 36px;
+  color: #333;
 }
 .jumbotron .btn-large {
   font-size: 20px;
+  font-weight: normal;
   padding: 14px 24px;
-  margin-right: 5px;
+  margin-right: 10px;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;
@@ -85,9 +94,27 @@ section {
   color: #999;
 }
 
+/* Masthead (docs home) */
+.masthead {
+  padding-top: 36px;
+  margin-bottom: 72px;
+}
+.masthead h1,
+.masthead p {
+  text-align: center;
+}
+.masthead h1 {
+  margin-bottom: 18px;
+}
+.masthead p {
+  margin: 0 5% 27px;
+}
+
+
 /* Benefits list in masthead */
 .benefits {
-  width: 280px;
+  display: none;
+  width: 260px;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -125,13 +152,14 @@ section {
   margin-right: 0;
 }
 .subhead h1 {
-  font-size: 45px;
+  font-size: 54px;
 }
 
 /* Subnav */
 .subnav {
   width: 100%;
   height: 36px;
+  overflow: hidden;
   background-color: #eeeeee; /* Old browsers */
   background-repeat: repeat-x; /* Repeat the gradient */
   background-image: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%); /* FF3.6+ */
@@ -167,13 +195,17 @@ section {
   color: #333;
 }
 .subnav .nav .active a {
-  background-color: #eee;
+  background-color: #e9e9e9;
+  border-right-color: #ddd;
+  border-left: 0;
+  padding-left: 13px;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
+     -moz-box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
+          box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
 }
 .subnav .nav li:first-child a {
   border-left: 0;
-  -webkit-border-radius: 4px 0 0 4px;
-     -moz-border-radius: 4px 0 0 4px;
-          border-radius: 4px 0 0 4px;
+  padding-left: 12px;
 }
 .subnav .nav li:last-child a {
   border-right: 0;
@@ -209,16 +241,9 @@ section {
 .quick-links {
   min-height: 30px;
   padding: 5px 20px;
-  margin: 45px 0;
+  margin: 36px 0;
   list-style: none;
   text-align: center;
-  background-color: #eee;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,.03);
-     -moz-box-shadow: inset 0 1px 0 rgba(0,0,0,.03);
-          box-shadow: inset 0 1px 0 rgba(0,0,0,.03);
   overflow: hidden;
 }
 .quick-links li {
@@ -261,12 +286,12 @@ section {
 .marketing p {
   margin-right: 10px;
 }
-.marketing .icon {
+.marketing .bs-icon {
   float: left;
   margin: 7px 10px 0 0;
   opacity: .8;
 }
-.marketing .small-icon {
+.marketing .small-bs-icon {
   float: left;
   margin: 4px 5px 0 0;
 }
@@ -466,7 +491,6 @@ section {
   font-family: Menlo, Monaco, "Courier New", monospace;
   font-size: 12px;
   color: #d14;
-  background-color: #f7f7f9;
 }
 .download-builder input[type=text]:focus {
   background-color: #fff;
@@ -475,7 +499,6 @@ section {
 /* Custom, larger checkbox labels */
 .download .checkbox {
   padding: 6px 10px 6px 25px;
-  font-size: 14px;
   color: #555;
   background-color: #f9f9f9;
   -webkit-border-radius: 3px;
@@ -487,10 +510,6 @@ section {
   color: #333;
   background-color: #f5f5f5;
 }
-.download .checkbox input[type=checkbox] {
-  position: relative;
-  top: 1px;
-}
 .download .checkbox small {
   font-size: 12px;
   color: #777;
@@ -498,17 +517,23 @@ section {
 
 /* Giant download button */
 .download-btn {
-  pading: 18px 20px;
-  margin: 45px 0;
+  margin: 36px 0 108px.i;
+}
+.download p,
+.download h4 {
+  max-width: 50%;
+  margin: 0 auto 18px;
+  color: #999;
   text-align: center;
-  border: 1px solid #eee;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+}
+.download-btn h4 {
+  margin-bottom: 0;
 }
 .btn.xlarge {
-  margin: 36px auto;
-  padding: 14px 24px;
+  display: block;
+  width: auto;
+  padding: 19px 24px;
+  margin-bottom: 27px;
   font-size: 30px;
   text-align: center;
   -webkit-border-radius: 6px;
@@ -596,9 +621,14 @@ form.well {
 
 /* Icons
 ------------------------- */
+.the-icons {
+  margin-bottom: 18px;
+}
 .the-icons i {
   display: block;
   margin-bottom: 5px;
+}
+.the-icons i:hover {
   background-color: rgba(255,0,0,.25);
 }
 .the-icons i:after {
@@ -606,9 +636,8 @@ form.well {
   content: attr(class);
   font-style: normal;
   margin-left: 20px;
-  width: 100px;
+  width: 140px;
 }
-
 #javascript input[type=checkbox] {
   position: relative;
   top: -1px;

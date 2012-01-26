@@ -14,17 +14,19 @@
 
     <!-- Le styles -->
     <link href="../bootstrap.css" rel="stylesheet">
+    <link href="../bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/docs.css" rel="stylesheet">
     <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target=".subnav" data-offset="50">
+  
   
   <!-- Navbar
     ================================================== -->
@@ -69,7 +71,7 @@
   <div class="subnav">
     <ul class="nav pills">
       <li><a href="#buttonGroups">Button groups</a></li>
-      <li><a href="#buttonDropdowns">Button dropdowns</a></li>
+      <li><a href="#comboButtons">Combo buttons</a></li>
       <li><a href="#navs">Nav, tabs, pills</a></li>
       <li><a href="#navbar">Navbar</a></li>
       <li><a href="#breadcrumbs">Breadcrumbs</a></li>
@@ -155,9 +157,9 @@
 
 <!-- Split button dropdowns
 ================================================== -->
-<section id="buttonDropdowns">
+<section id="comboButtons">
   <div class="page-header">
-    <h1>Split button dropdowns <small>Built on button groups to provide contextual menus</small></h1>
+    <h1>Combo buttons <small>Built on button groups to provide contextual dropdown menus</small></h1>
   </div>
   <div class="row">
     <div class="span4">
@@ -451,13 +453,13 @@
       <div class="well" style="padding: 8px 0;">
         <ul class="nav list">
           <li class="nav-header">List header</li>
-          <li class="active"><a href="#"><i class="home"></i> Home</a></li>
-          <li><a href="#"><i class="book"></i> Library</a></li>
-          <li><a href="#"><i class="pencil"></i> Applications</a></li>
+          <li class="active"><a href="#"><i class="icon home"></i> Home</a></li>
+          <li><a href="#"><i class="icon book"></i> Library</a></li>
+          <li><a href="#"><i class="icon pencil"></i> Applications</a></li>
           <li class="nav-header">Another list header</li>
-          <li><a href="#"><i class="user"></i> Profile</a></li>
-          <li><a href="#"><i class="cog"></i> Settings</a></li>
-          <li><a href="#"><i class="flag"></i> Help</a></li>
+          <li><a href="#"><i class="icon user"></i> Profile</a></li>
+          <li><a href="#"><i class="icon cog"></i> Settings</a></li>
+          <li><a href="#"><i class="icon flag"></i> Help</a></li>
         </ul>
       </div> <!-- /well -->
 <pre class="prettyprint linenums">
@@ -465,7 +467,7 @@
   ...
   &lt;li&gt;
     &lt;a href="#"&gt;
-      &lt;i class="book"&gt;&lt;/i&gt;
+      &lt;i class="icon book"&gt;&lt;/i&gt;
       Library
     &lt;/a&gt;
   &lt;/li&gt;
@@ -1247,6 +1249,7 @@
 
       </section>
 
+
      <!-- Footer
       ================================================== -->
       <footer class="footer">
@@ -1259,9 +1262,11 @@
     </div><!-- /container -->
 
 
-    <!-- Le javascript -->
+
+    <!-- Le javascript
+    ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <!-- <script src="http://code.jquery.com/jquery-1.7.min.js"></script> -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <script src="../js/tests/vendor/jquery.js"></script>
     <script src="assets/js/google-code-prettify/prettify.js"></script>
     <script src="../js/bootstrap-transition.js"></script>
