@@ -26,37 +26,44 @@
   </head>
 
   <body data-spy="scroll" data-target=".subnav" data-offset="50">
-  
-  
+
+
   <!-- Navbar
     ================================================== -->
-    <div class="navbar navbar-fixed">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="i-bar"></span>
+            <span class="i-bar"></span>
+            <span class="i-bar"></span>
+          </a>
           <a class="brand" href="./index.html">Bootstrap</a>
-          <ul class="nav">
-            <li class="">
-              <a href="./index.html">Overview</a>
-            </li>
-            <li class="">
-              <a href="./scaffolding.html">Scaffolding</a>
-            </li>
-            <li class="">
-              <a href="./base-css.html">Base CSS</a>
-            </li>
-            <li class="">
-              <a href="./components.html">Components</a>
-            </li>
-            <li class="">
-              <a href="./javascript.html">Javascript plugins</a>
-            </li>
-            <li class="">
-              <a href="./less.html">Using LESS</a>
-            </li>
-            <li class="">
-              <a href="./download.html">Download</a>
-            </li>
-          </ul>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">Overview</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">Scaffolding</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">Base CSS</a>
+              </li>
+              <li class="">
+                <a href="./components.html">Components</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">Javascript plugins</a>
+              </li>
+              <li class="">
+                <a href="./less.html">Using LESS</a>
+              </li>
+              <li class="">
+                <a href="./download.html">Customize</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -75,20 +82,50 @@
 </header>
 
 
-
-<!-- EXAMPLES
-================================================== -->
-<section id="examples">
-  <div class="page-header">
-    <h1>Examples from 1.x</h1>
-  </div>
-
-<p><a href="../examples/container-app.html">Container app</a></p>
-<p><a href="../examples/fluid.html">Fluid layout</a></p>
-<p><a href="../examples/fluid-reverse.html">Reversed fluid layout</a></p>
-<p><a href="../examples/hero.html">Hero marketing site</a></p>
-
-</section>
+<ul class="thumbnails bootstrap-examples">
+  <li class="span4">
+    <a href="../examples/hero.html" class="thumbnail">
+      <img src="http://placehold.it/360x240" alt="">
+    </a>
+    <h3>Basic marketing site</h3>
+    <p></p>
+  </li>
+  <li class="span4">
+    <a href="../examples/fluid.html" class="thumbnail">
+      <img src="http://placehold.it/360x240" alt="">
+    </a>
+    <h3>Fluid layout</h3>
+    <p></p>
+  </li>
+  <li class="span4">
+    <a href="../examples/fluid-reverse.html" class="thumbnail">
+      <img src="http://placehold.it/360x240" alt="">
+    </a>
+    <h3>Fluid layout reversed</h3>
+    <p></p>
+  </li>
+  <li class="span4">
+    <a href="../examples/container-app.html" class="thumbnail">
+      <img src="http://placehold.it/360x240" alt="">
+    </a>
+    <h3>Container application</h3>
+    <p></p>
+  </li>
+  <li class="span4">
+    <a href="#" class="thumbnail">
+      <img src="http://placehold.it/360x240" alt="">
+    </a>
+    <h3>Fullscreen</h3>
+    <p></p>
+  </li>
+  <li class="span4">
+    <a href="#" class="thumbnail">
+      <img src="http://placehold.it/360x240" alt="">
+    </a>
+    <h3>Simple layout</h3>
+    <p></p>
+  </li>
+</ul>
 
 
      <!-- Footer
