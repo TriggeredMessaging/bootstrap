@@ -356,8 +356,8 @@ hr.soften {
   height: 240px;
 }
 .mini-layout.fluid .mini-layout-body {
-  width: 60%;
-  margin-left: 10px;
+  width: 77.5%;
+  margin-left: 2.5%;
 }
 
 
@@ -440,7 +440,7 @@ hr.soften {
 
 /* Giant download button */
 .download-btn {
-  margin: 36px 0 108px.i;
+  margin: 36px 0 108px;
 }
 .download p,
 .download h4 {
@@ -455,7 +455,7 @@ hr.soften {
 .download p {
   margin-bottom: 18px;
 }
-.btn.xlarge {
+.download-btn .btn {
   display: block;
   width: auto;
   padding: 19px 24px;
@@ -553,6 +553,7 @@ form.well {
 }
 
 /* For input sizes, make them display block */
+.docs-input-sizes select,
 .docs-input-sizes input[type=text] {
   display: block;
   margin-bottom: 9px;
